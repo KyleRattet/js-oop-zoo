@@ -1,6 +1,5 @@
 var Animal = require("./animal");
 
-var denverZoo = new Zoo("denver", vegas);
 
 function Zoo(name, location){
   this.name = name;
@@ -15,41 +14,45 @@ Zoo.prototype.changeLocation = function (newLocation) {
 };
 
 Zoo.prototype.open = function() {
-  if(this.status = "closed") {
+  if(this.status === "closed") {
     this.status = "open";
   }
   return this.status;
 };
 
 Zoo.prototype.close = function() {
-  if(this.status = "open") {
+  if(this.status === "open") {
     this.status = "closed";
   }
   return this.status;
 };
 
 Zoo.prototype.isOpen = function() {
-  if(this.status = "open") {
+  if(this.status === "open") {
     return "Open!";
+  } else {
+    return "Closed.";
   }
 };
 
 
-//work in progress
 Zoo.prototype.addAnimal = function(animal) {
-  if(this.status = "open") {
-    for (var i = 0; i < this.animals.length; i++) {
-      if(animal !== this.animals[i]) {
-        this.animals.push(animal)
+  if(this.status === "open" && animal instanceof Animal === true && this.animals.indexOf(animal) === -1) {
+    this.animals.push(animal);
+  }
+  return this.animals;
+};
+
+Zoo.prototype.removeAnimal = function (animalArray, animal) {
+  if(this.status === "open") {
+    for (var i = 0; i < animalArray.length; i++) {
+      if(animal === animalArray[i]) {
+        animalArray.splice(animalArray[i], 1);
       }
     }
   }
-};
+  return animalArray;
 
-Zoo.prototype.removeAnimal = function (animal) {
-  if(this.status = "open") {
-
-  }
 };
 
 module.exports = Zoo;
