@@ -27,7 +27,7 @@ Animal.prototype.feed = function(){
 
 Animal.prototype.wakeUp = function(){
   if (this.awake === false) {
-    this.awake = true
+    this.awake = true;
   }
   return this.awake;
 };
