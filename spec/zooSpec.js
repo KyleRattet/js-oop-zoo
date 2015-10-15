@@ -24,7 +24,6 @@ describe('Zoo', function(){
     });
   });
 
-//in progress
   describe('#isOpen', function(){
     it('should see if the zoo is open', function(){
       zoo.open();
@@ -69,7 +68,7 @@ describe('Zoo', function(){
       zoo.addAnimal(lion);
       zoo.addAnimal(pig);
       zoo.removeAnimal(zoo.animals, lion);
-      expect(zoo.animals.length).toEqual(1);
+      expect(zoo.animals).toEqual([pig]);
     });
   });
 });

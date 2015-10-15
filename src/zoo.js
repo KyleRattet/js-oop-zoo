@@ -1,6 +1,6 @@
 var Animal = require("./animal");
 
-
+//Zoo Class
 function Zoo(name, location){
   this.name = name;
   this.location = location;
@@ -8,6 +8,7 @@ function Zoo(name, location){
   this.animals = [];
 }
 
+//Zoo Methods
 Zoo.prototype.changeLocation = function (newLocation) {
   this.location = newLocation;
   return newLocation;
@@ -56,3 +57,7 @@ Zoo.prototype.removeAnimal = function (animalArray, animal) {
 };
 
 module.exports = Zoo;
+
+
+
+

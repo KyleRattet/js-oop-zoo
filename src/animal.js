@@ -1,3 +1,5 @@
+
+//Animal Class
 function Animal(name, age, kind){
   this.name = name;
   this.age = age;
@@ -5,6 +7,7 @@ function Animal(name, age, kind){
   this.awake = false;
 }
 
+///Animal Methods
 Animal.prototype.oink = function(){
   if (this.kind === 'Pig'){
     return 'oink';
