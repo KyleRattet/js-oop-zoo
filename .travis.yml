@@ -8,9 +8,9 @@ node_js:
 services:
   - mongodb
 
-# before_script:
-#   - "npm install -g bower"
-#   - bower install
+before_script:
+  - npm install -g jasmine
+
 
 script:
   - jasmine
